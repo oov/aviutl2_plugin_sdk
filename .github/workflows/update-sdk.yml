@@ -1,0 +1,43 @@
+name: Update SDK
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-sdk:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run SDK update script
+        run: bash .tools/update-sdk.sh
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --cached --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No SDK changes detected"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "SDK changes detected"
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          SDK_DATE=$(cat .tools/sdk_last_update.txt)
+          git commit -m "Update SDK to ${SDK_DATE}"
+          git push
