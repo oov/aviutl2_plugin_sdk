@@ -65,7 +65,7 @@ LRESULT CALLBACK wnd_proc(HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam)
 //---------------------------------------------------------------------
 //	ƒvƒ‰ƒOƒCƒ““o˜^ŠÖ”
 //---------------------------------------------------------------------
-EXTERN_C __declspec(dllexport) void RegisterPlugin(HOST_APP_TABLE *host) {
+EXTERN_C __declspec(dllexport) void RegisterPlugin(HOST_APP_TABLE* host) {
 	// ƒvƒ‰ƒOƒCƒ“‚Ìî•ñ‚ðÝ’è
 	host->set_plugin_information(L"Sample Window Client version 2.00 By ‚j‚d‚m‚­‚ñ");
 
