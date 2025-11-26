@@ -1,3 +1,4 @@
-*.h text eol=crlf
-*.cpp text eol=crlf
-*.txt text eol=crlf
+*.h text eol=crlf encoding=cp932
+*.cpp text eol=crlf encoding=cp932
+*.txt text eol=crlf encoding=utf-8
+*.obj2 text eol=crlf encoding=utf-8
