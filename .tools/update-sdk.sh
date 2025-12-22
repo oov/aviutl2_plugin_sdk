@@ -31,6 +31,10 @@ error() {
     echo "[ERROR] $*" >&2
 }
 
+trim() {
+    tr -d '[:space:]'
+}
+
 step1_download_html() {
     info "Step 1: Downloading HTML from ${SDK_URL}"
 
@@ -60,7 +64,7 @@ step2_parse_timestamp() {
     fi
 
     if [[ -f "${TIMESTAMP_FILE}" ]]; then
-        info "Timestamp already detected: $(cat "${TIMESTAMP_FILE}")"
+        info "Timestamp already detected: $(trim < "${TIMESTAMP_FILE}")"
         return 0
     fi
 
@@ -110,11 +114,11 @@ step3_check_update() {
     fi
 
     local new_date
-    new_date=$(cat "${TIMESTAMP_FILE}")
+    new_date=$(trim < "${TIMESTAMP_FILE}")
 
     local last_date=""
     if [[ -f "${LAST_UPDATE_FILE}" ]]; then
-        last_date=$(cat "${LAST_UPDATE_FILE}")
+        last_date=$(trim < "${LAST_UPDATE_FILE}")
         info "Last applied SDK update: ${last_date}"
     else
         info "No previous SDK update record found."
@@ -145,7 +149,7 @@ step4_extract_sdk() {
     fi
 
     local sdk_url
-    sdk_url=$(cat "${STATE_DIR}/sdk_download_url.txt")
+    sdk_url=$(trim < "${STATE_DIR}/sdk_download_url.txt")
 
     # Download the SDK archive if not already downloaded
     if [[ ! -f "${ARCHIVE_FILE}" ]]; then
@@ -194,7 +198,7 @@ step4_extract_sdk() {
 
     # Update the last update file
     local new_date
-    new_date=$(cat "${TIMESTAMP_FILE}")
+    new_date=$(trim < "${TIMESTAMP_FILE}")
     echo "${new_date}" > "${LAST_UPDATE_FILE}"
 
     # Stage all new and modified files (respecting .gitignore)
