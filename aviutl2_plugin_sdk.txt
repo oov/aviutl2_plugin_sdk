@@ -255,3 +255,6 @@
     [aux2] set_object_item_value()でテキスト設定を変更した時にオブジェクト設定の表示が更新されないことがあるのを修正
     [aux2] get_mouse_layer_frame()でファイルD&D時のドロップ位置を取得出来るようにした
     各種ヘッダーファイルに#pragma onceを追加
+    
+    [2026/3/29]
+    [mod2] push_result_array_boolean(),push_result_table_boolean()を追加
