@@ -64,6 +64,8 @@
         name=サンプルパッケージ
         ; パッケージの情報 ※インストール、アンインストール等で表示されます
         information=サンプルパッケージ ver2.00 by Kenkun
+        ; アンインストール時にサブフォルダのファイル削除指定 ※競合しないPlugin,Script等の一つ下のフォルダのファイルを全て削除対象にする
+        uninstallSubFolderFile=1
 
     プラグイン・スクリプト・言語ファイルを含める場合は下記のような構成になります。
         SamplePackage.au2pkg.zip
@@ -258,3 +260,9 @@
     
     [2026/3/29]
     [mod2] push_result_array_boolean(),push_result_table_boolean()を追加
+
+    [2026/4/12]
+    [auf2] FILTER_ITEM_SEPARATORを追加
+    [aux2] EDIT_HANDLEにget_edit_state()を追加
+    [aux2] EDIT_SECTIONの幾つかの関数の実装を改善
+    [au2pkg] package.iniにuninstallSubFolderFileの項目を追加
