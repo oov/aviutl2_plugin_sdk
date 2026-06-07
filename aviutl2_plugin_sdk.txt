@@ -319,3 +319,7 @@
     [auf2] FILTER_PROC_VIDEOに幾つかの関数を追加、引数の修飾子を調整
     [aux2] EDIT_HANDLEに幾つかの関数を追加
     [cache2] CACHE_HANDLEに幾つかの関数を追加
+
+    [2026/6/7]
+    [aux2] EDIT_SECTIONにオブジェクトの設定項目の情報取得関数を追加
+    [aux2] HOST_APP_TABLEにregister_font_collection()を追加
