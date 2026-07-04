@@ -168,7 +168,6 @@ void meta_table_add(SCRIPT_MODULE_PARAM* param) {
 }
 
 void meta_table(SCRIPT_MODULE_PARAM* param) {
-	auto userdata = new UserData();
 	if (param->get_param_num() == 3) { // ˆø”‚ª‚ ‚éê‡‚Í‰Šú’l‚ğ“ü‚ê‚é
 		meta_table_new(param, param->get_param_double(0), param->get_param_double(1), param->get_param_double(2));
 	} else {
