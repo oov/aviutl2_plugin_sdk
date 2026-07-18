@@ -382,3 +382,7 @@
     [aux2] set_object_item_value(),set_effect_item_value()でレイヤー範囲を変更した時にUndo出来ないのを修正
     [aux2] register_event_listener()のイベント種別にCHANGE_FOCUS_OBJECTを追加
     ファイルパス変数の説明を追加
+
+    [2026/7/18]
+    [aux2] set_focus_object()で削除されたオブジェクトが選択されないように修正
+    [aux2] set_focus_object()で選択するオブジェクトを解除出来るようにした
