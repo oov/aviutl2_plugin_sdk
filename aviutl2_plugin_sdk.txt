@@ -419,3 +419,7 @@
     [aux2] enum_effect_item()で取得される設定項目種別を追加
     [auf2] OBJECT_INFOにorigin_frameを追加
     [cache2] CACHE_HANDLEにclear_image_cache(),clear_audio_cache()を追加
+    
+    [2026/8/22]
+    [auf2] set_filter_item_data_size()でデータサイズ変更した場合に正しくデータが保存されないのを修正
+    [aux2] 設定項目の名称で対象を指定する関数で設定値を持たない同名の項目があると正しく動作しないことがあるのを修正
