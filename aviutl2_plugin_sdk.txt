@@ -428,3 +428,6 @@
     [aux2] move_object_section()で開始点,終了点を移動した時にレイヤー範囲が再描画されないのを修正
     [aux2] 数値グループ項目の名称を対象として指定する関数が正しく動作しないのを修正
     [auf2] FILTER_ITEM_HIDE_RULEを追加
+
+    [2026/8/31]
+    [auf2] FILTER_PLUGIN_TABLEのitemsでFILTER_ITEM_HIDE_RULEより後の設定項目の値が正しく反映されないのを修正
