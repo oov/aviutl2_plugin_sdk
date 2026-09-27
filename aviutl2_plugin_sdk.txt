@@ -446,3 +446,8 @@
     [aux2] EDIT_HANDLEにoutput_file()を追加
     [aux2] EDIT_INFOにbackgroundを追加
     [aux2] register_event_listener()のイベント種別にCHANGE_EDIT_STATEを追加
+
+    [2026/9/27]
+    [auf2] exec_effect()に自身以降のフィルタ効果を実行する指定を追加
+    [auf2] OBJECT_INFOにhandle,effect_handleを追加
+    [auf2] SCENE_INFOにidを追加
