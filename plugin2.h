@@ -950,6 +950,10 @@ struct EDIT_HANDLE {
 	// –ß‚è’l				: ¬Œ÷‚µ‚½ê‡‚Ítrue (o—Í’†“™‚Í¸”s‚µ‚Ü‚·)
 	bool (*output_file)(LPCWSTR file, LPCWSTR output_plugin, void* param, void (*func_project_config)(void* param, PROJECT_FILE* project));
 
+	// ‚DPI‚ÌŠg‘å”ä—¦‚ğæ“¾‚µ‚Ü‚·
+	// –ß‚è’l	: ‚DPI‚ÌŠg‘å”ä—¦
+	float (*get_high_dpi_ratio)();
+
 };
 
 //----------------------------------------------------------------------------------
