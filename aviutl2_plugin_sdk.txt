@@ -464,3 +464,10 @@
     [aux2] get_palette_info()でPALETTE_INFOよりサイズが小さい場合に落ちるのを修正
     [aux2] EDIT_HANDLEにget_high_dpi_ratio()を追加
     [auf2] SCENE_INFOにflag,rendering_idを追加
+
+    [2026/10/24]
+    [aux2] register_font_collection()で登録したフォントの解放タイミングを調整
+    [auf2] get_framebuffer_texture2d()が正しく返却されないことがあるのを修正
+    [auf2] FILTER_PROC_AUDIOにget_audiobuffer_data(),set_audiobuffer_data()を追加
+    [aux2] EDIT_HANDLEにget_direct3d_device()を追加
+    [aux2] PROJECT_FILEに幾つかの関数を追加
