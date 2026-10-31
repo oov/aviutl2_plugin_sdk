@@ -471,3 +471,8 @@
     [auf2] FILTER_PROC_AUDIOにget_audiobuffer_data(),set_audiobuffer_data()を追加
     [aux2] EDIT_HANDLEにget_direct3d_device()を追加
     [aux2] PROJECT_FILEに幾つかの関数を追加
+
+    [2026/10/31]
+    [auf2] FILTER_ITEM_HIDE_RULEの非表示条件の対象項目を追加
+    [auf2] FILTER_PROC_VIDEOにget_camera_mode(),get_camera_control_object()を追加
+    [auf2] OBJECT_INFOに幾つかのフラグを追加
